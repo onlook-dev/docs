@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Logo(props: { width?: number; height?: number }) {
     return (
@@ -8,5 +8,5 @@ export default function Logo(props: { width?: number; height?: number }) {
             height={props.height || 100}
             alt="Onlook logo"
         />
-    )
+    );
 }
