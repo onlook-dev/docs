@@ -11,7 +11,7 @@ const LinkedHeader = ({ title, link }: { title: string; link: string }) => {
             >
                 <Link2Icon />
             </Link>
-            <h2 className="flex-shrink-0 w-[fit-content] h-[fit-content] text-[38px]">
+            <h2 className="flex-shrink-0 w-[fit-content] h-[fit-content] text-[20px] text-[#000000] font-medium block">
                 {title}
             </h2>
         </div>
