@@ -14,10 +14,8 @@ export default function DocumentationPage() {
             </div>
             <div className="flex flex-col gap-[30px] p-[50px] border-transparent border-0 h-[fit-content] items-center justify-center w-[fit-content] pr-[100px]">
                 <div className="max-w-[700px] flex flex-col gap-[24px] mb-[400px] h-[fit-content]">
-                    <div className="flex flex-col gap-[2px]">
-                        <h2 className="w-[fit-content] h-[fit-content] text-gray-800 font-semibold text-[20px]">
-                            Onlook
-                        </h2>
+                    <div className="flex flex-col gap-[12px]">
+                        <LinkedHeader level="h2" title="Onlook" link="#" />
                         <p className="w-[fit-content] h-[fit-content] text-gray-800">
                             Onlook is a visual editor for React apps running with Tailwind.
                             Developers and designers can use the visual editor to see and edit the
@@ -26,7 +24,7 @@ export default function DocumentationPage() {
                     </div>
                     <div className="justify-center items-center h-[400px] bg-transparent rounded-[10px] border-[#8a8a8a] border hidden"></div>
                     <div className="flex items-center group">
-                        <LinkedHeader title="Getting Started" link="#" />
+                        <LinkedHeader level="h3" title="Getting Started" link="#" />
                     </div>
                     <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] hidden">
                         1. Set up your app repository
@@ -36,7 +34,7 @@ export default function DocumentationPage() {
 
                     <div className="flex flex-col gap-[24px]">
                         <div className="flex items-center group text-[20px]">
-                            <LinkedHeader title="Quick Start" link="#" />
+                            <LinkedHeader level="h3" title="Quick Start" link="#" />
                         </div>
                         <div>
                             <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px]">
@@ -114,7 +112,7 @@ export default function DocumentationPage() {
                     </div>
                     <div className="flex flex-col gap-[24px]">
                         <div className="flex items-center group">
-                            <LinkedHeader title="Use your own React project" link="#" />
+                            <LinkedHeader level="h2" title="Use your own React project" link="#" />
                         </div>
                         <div>
                             <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px]">
@@ -131,7 +129,7 @@ export default function DocumentationPage() {
                                 </div>
                                 <div>
                                     <h4 className="h-[fit-content] w-[fit-content] text-[#000000] text-[18px] font-medium">
-                                        Create the Project Folder
+                                        Setup Onlook on the project root
                                     </h4>
                                 </div>
                             </div>
@@ -141,9 +139,9 @@ export default function DocumentationPage() {
                                 </p>
                                 <PackageSelector
                                     managers={{
-                                        npm: 'npx onlook create my-onlook-project',
-                                        yarn: 'yarn dlx onlook create my-onlook-project',
-                                        bun: 'bunx onlook create my-onlook-project',
+                                        npm: 'npx onlook setup',
+                                        yarn: 'yarn dlx onlook setup',
+                                        bun: 'bunx onlook setup',
                                     }}
                                 />
                             </div>
