@@ -15,7 +15,7 @@ export default function DocumentationPage() {
             <div className="flex flex-col gap-[30px] p-[50px] border-transparent border-0 h-[fit-content] items-center justify-center w-[fit-content] pr-[100px]">
                 <div className="max-w-[700px] flex flex-col gap-[24px] mb-[400px] h-[fit-content]">
                     <div className="flex flex-col gap-[12px]">
-                        <LinkedHeader level="h2" title="Onlook" link="#" />
+                        <LinkedHeader level="h2" title="Onlook" link="#" id="onlook" />
                         <p className="w-[fit-content] h-[fit-content] text-gray-800">
                             Onlook is a visual editor for React apps running with Tailwind.
                             Developers and designers can use the visual editor to see and edit the
@@ -77,6 +77,7 @@ export default function DocumentationPage() {
                                         Run the project
                                     </h4>
                                 </div>
+                                <div className="w-[30px] h-[30px] bg-[#E3F3FF] hidden"></div>
                             </div>
                             <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-gray-200 mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px] flex flex-col gap-[12px]">
                                 <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] text-gray-800">
@@ -112,7 +113,12 @@ export default function DocumentationPage() {
                     </div>
                     <div className="flex flex-col gap-[24px]">
                         <div className="flex items-center group">
-                            <LinkedHeader level="h2" title="Use your own React project" link="#" />
+                            <LinkedHeader
+                                level="h2"
+                                title="Use your own React project"
+                                link="#"
+                                id="use-react"
+                            />
                         </div>
                         <div>
                             <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px]">

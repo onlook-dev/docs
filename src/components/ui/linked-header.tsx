@@ -17,28 +17,34 @@ interface LinkedHeaderProps {
     title: string;
     link?: string;
     className?: string;
+    id?: string; // Add id prop
 }
 
-const LinkedHeader: React.FC<LinkedHeaderProps> = ({ level = 'h2', title, link, className = '' }) => {
+const LinkedHeader: React.FC<LinkedHeaderProps> = ({
+    level = 'h2',
+    title,
+    link,
+    className = '',
+    id,
+}) => {
     const HeadingTag = level as keyof JSX.IntrinsicElements;
 
     return (
-                    <Link
-                href={link || '/default-url'} 
-                className="flex items-center group relative right-[32px] p-2 justify-start transition-opacity duration-300"
-            >
-                <Link2Icon 
-                    className="text-transparent group-hover:text-gray-500 group-hover:hover:text-gray-800 hover:text-gray-800 transition-colors duration-300" 
-                />
-                {React.createElement(
-                    HeadingTag,
-                    {
-                        className: `${headerStyles[level]} ${className} flex-shrink-0 w-[fit-content] h-[fit-content] ml-2`,
-                    },
-                    title
-                )}
-            </Link>
+        <Link
+            href={link || '/default-url'}
+            className="flex items-center group relative right-[32px] p-2 justify-start transition-opacity duration-300"
+        >
+            <Link2Icon className="text-transparent group-hover:text-gray-500 group-hover:hover:text-gray-800 hover:text-gray-800 transition-colors duration-300" />
 
+            {React.createElement(
+                HeadingTag,
+                {
+                    className: `${headerStyles[level]} ${className} flex-shrink-0 w-[fit-content] h-[fit-content] ml-2`,
+                    id: id, // Set the id on the heading
+                },
+                title,
+            )}
+        </Link>
     );
 };
 
