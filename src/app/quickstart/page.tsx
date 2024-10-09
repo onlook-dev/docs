@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 export default function DocumentationPage() {
     return (
         <div className="h-full w-full border-0 flex">
-            <div className="flex justify-start font-semibold h-full items-start w-1/5 flex-col gap-[4px] p-[20px] pl-[20px] pt-[20px] pr-[20px] pb-[20px] border-[01px]">
+            <div className="flex justify-start font-semibold h-full items-start w-1/5 flex-col gap-[4px] p-[20px] mt-[50px] pt-[20px] pb-[20px] border-r-[01px] pl-[40px] pr-[40px]">
                 <h6 className="w-full flex items-center uppercase h-[fit-content] text-[12px]">
                     Quick Start
                 </h6>
@@ -14,6 +14,8 @@ export default function DocumentationPage() {
             </div>
             <div className="flex flex-col gap-[30px] p-[50px] border-transparent border-0 h-[fit-content] items-center justify-center w-[fit-content] pr-[100px]">
                 <div className="max-w-[700px] flex flex-col gap-[24px] mb-[400px] h-[fit-content]">
+                    <div className="justify-center items-center h-[400px] bg-transparent rounded-[10px] border-[#8a8a8a] border hidden"></div>
+
                     <div className="flex flex-col gap-[12px]">
                         <LinkedHeader level="h2" title="Onlook" link="#" id="onlook" />
                         <p className="w-[fit-content] h-[fit-content] text-gray-800">
@@ -22,19 +24,20 @@ export default function DocumentationPage() {
                             output of their app, all while reliably writing changes to code.
                         </p>
                     </div>
-                    <div className="justify-center items-center h-[400px] bg-transparent rounded-[10px] border-[#8a8a8a] border hidden"></div>
-                    <div className="flex items-center group">
-                        <LinkedHeader level="h3" title="Getting Started" link="#" />
-                    </div>
+                    <div className="bg-gray-200 w-full h-[2px]"></div>
+
                     <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] hidden">
                         1. Set up your app repository
                     </p>
                     <p className="w-full h-[fit-content] hidden">Use npx onlook create</p>
                     <div className="bg-transparent rounded-[10px] border-[#909090] border h-[300px] w-full hidden"></div>
 
+                    <div className="flex items-center group">
+                        <LinkedHeader level="h3" title="Getting Started" link="#" />
+                    </div>
                     <div className="flex flex-col gap-[24px]">
                         <div className="flex items-center group text-[20px]">
-                            <LinkedHeader level="h3" title="Quick Start" link="#" />
+                            <LinkedHeader level="h2" title="Quick Start" link="#" />
                         </div>
                         <div>
                             <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px]">
@@ -111,6 +114,7 @@ export default function DocumentationPage() {
                             </div>
                         </div>
                     </div>
+
                     <div className="flex flex-col gap-[24px]">
                         <div className="flex items-center group">
                             <LinkedHeader
@@ -187,6 +191,12 @@ export default function DocumentationPage() {
                 </div>
             </div>
             <HeadingList />
+            <div className="w-[186px] h-[91px] bg-[#E3F3FF] hidden"></div>
+            <div className="absolute bottom-[10px] right-[10px] flex justify-center items-center p-[8px] pl-[8px] pt-[8px] pr-[8px] pb-[8px] h-[fit-content] w-[fit-content] rounded-[4px] rounded-tl-[4px] rounded-tr-[4px] rounded-bl-[4px] rounded-br-[4px] bg-[#212c35] border-[#434343] border">
+                <p className="w-[fit-content] text-[#ffffff] leading-[20px] h-[fit-content]">
+                    Built with Onlook.dev
+                </p>
+            </div>
         </div>
     );
 }
