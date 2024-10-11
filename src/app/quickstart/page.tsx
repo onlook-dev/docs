@@ -1,21 +1,17 @@
+'use client';
+
 import LinkedHeader from '@/components/ui/linked-header';
 import PackageSelector from '@/components/ui/package-selector';
 import HeadingList from '@/components/ui/headinglist';
 import { useState, useEffect } from 'react';
+import LeftNavBar from '@/components/ui/leftnavbar';
 
 export default function DocumentationPage() {
     return (
         <div className="h-full w-full border-0 flex">
-            <div className="flex justify-start font-semibold h-full items-start w-1/5 flex-col gap-[4px] p-[20px] mt-[50px] pt-[20px] pb-[20px] border-r-[01px] pl-[40px] pr-[40px]">
-                <h6 className="w-full flex items-center uppercase h-[fit-content] text-[12px]">
-                    Quick Start
-                </h6>
-                <p className="w-full h-[fit-content]">Overview</p>
-            </div>
+            <LeftNavBar />
             <div className="flex flex-col gap-[30px] p-[50px] border-transparent border-0 h-[fit-content] items-center justify-center w-[fit-content] pr-[100px]">
                 <div className="max-w-[700px] flex flex-col gap-[24px] mb-[400px] h-[fit-content]">
-                    <div className="justify-center items-center h-[400px] bg-transparent rounded-[10px] border-[#8a8a8a] border hidden"></div>
-
                     <div className="flex flex-col gap-[12px]">
                         <LinkedHeader level="h2" title="Onlook" link="#" id="onlook" />
                         <p className="w-[fit-content] h-[fit-content] text-gray-800">
@@ -24,15 +20,17 @@ export default function DocumentationPage() {
                             output of their app, all while reliably writing changes to code.
                         </p>
                     </div>
-                    <div className="bg-gray-200 w-full h-[2px]"></div>
 
-                    <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] hidden">
-                        1. Set up your app repository
-                    </p>
-                    <p className="w-full h-[fit-content] hidden">Use npx onlook create</p>
-                    <div className="bg-transparent rounded-[10px] border-[#909090] border h-[300px] w-full hidden"></div>
-
-                    <div className="flex items-center group">
+                    <div
+                        className="w-full flex h-[fit-content] flex-row gap-[12px] items-center p-[20px] rounded-[2px] border bg-[#d6e4ff] rounded-br-[2px]"
+                        key="1728518740198"
+                    >
+                        <div className="h-[30px] bg-blue-500 w-[30px] rounded-br-[20p]"></div>
+                        <p className="w-[fit-content] h-[fit-content] text-blue-500">
+                            More information can go here
+                        </p>
+                    </div>
+                    <div className="flex items-center group" key="1728518791939">
                         <LinkedHeader level="h3" title="Getting Started" link="#" />
                     </div>
                     <div className="flex flex-col gap-[24px]">
@@ -40,7 +38,7 @@ export default function DocumentationPage() {
                             <LinkedHeader level="h2" title="Quick Start" link="#" />
                         </div>
                         <div>
-                            <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px]">
+                            <p className="h-[fit-content] w-[fit-content] text-gray-800 text-[16px]">
                                 Follow these steps to integrate Onlook into a new web app.
                             </p>
                         </div>
@@ -69,7 +67,11 @@ export default function DocumentationPage() {
                                     }}
                                 />
                             </div>
-                            <div className="flex gap-[16px] items-center flex-row h-[fit-content]">
+
+                            <div
+                                className="flex gap-[16px] items-center flex-row h-[fit-content]"
+                                key="1728518749590"
+                            >
                                 <div className="rounded-[40px] rounded-tl-[40px] rounded-tr-[40px] rounded-bl-[40px] rounded-br-[40px] w-[50px] h-[50px] border-gray-200 border bg-transparent flex justify-center items-center">
                                     <p className="w-full h-full flex justify-center items-center">
                                         2
@@ -80,9 +82,12 @@ export default function DocumentationPage() {
                                         Run the project
                                     </h4>
                                 </div>
-                                <div className="w-[30px] h-[30px] bg-[#E3F3FF] hidden"></div>
                             </div>
-                            <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-gray-200 mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px] flex flex-col gap-[12px]">
+
+                            <div
+                                className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-gray-200 mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px] flex flex-col gap-[12px]"
+                                key="1728518781120"
+                            >
                                 <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] text-gray-800">
                                     Run your app so you can edit it.
                                 </p>
@@ -94,7 +99,11 @@ export default function DocumentationPage() {
                                     }}
                                 />
                             </div>
-                            <div className="flex gap-[16px] items-center flex-row h-[fit-content]">
+
+                            <div
+                                className="flex gap-[16px] items-center flex-row h-[fit-content]"
+                                key="1728518795678"
+                            >
                                 <div className="rounded-[40px] rounded-tl-[40px] rounded-tr-[40px] rounded-bl-[40px] rounded-br-[40px] w-[50px] h-[50px] border-gray-200 border bg-transparent flex justify-center items-center">
                                     <p className="w-full h-full flex justify-center items-center">
                                         3
@@ -106,7 +115,10 @@ export default function DocumentationPage() {
                                     </h4>
                                 </div>
                             </div>
-                            <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-transparent mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px]">
+                            <div
+                                className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-transparent mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px]"
+                                key="1728518803608"
+                            >
                                 <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] text-gray-800">
                                     Open Onlook and make sure the browser points to
                                     <span className="code-span">http://localhost:3000</span>
@@ -143,6 +155,7 @@ export default function DocumentationPage() {
                                     </h4>
                                 </div>
                             </div>
+
                             <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-gray-200 mb-0 pt-[8px] pl-[40px] h-[fit-content] pb-[36px] flex flex-col items-start gap-[12px]">
                                 <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] text-gray-800">
                                     Run this command on your project's root folder:
@@ -155,6 +168,7 @@ export default function DocumentationPage() {
                                     }}
                                 />
                             </div>
+
                             <div className="flex gap-[16px] items-center flex-row h-[fit-content]">
                                 <div className="rounded-[40px] rounded-tl-[40px] rounded-tr-[40px] rounded-bl-[40px] rounded-br-[40px] w-[50px] h-[50px] border-gray-200 border bg-transparent flex justify-center items-center">
                                     <p className="w-full h-full flex justify-center items-center">
@@ -167,7 +181,12 @@ export default function DocumentationPage() {
                                     </h4>
                                 </div>
                             </div>
-                            <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-gray-200 mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px] flex flex-col gap-[12px]"></div>
+                            <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-gray-300 mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px]">
+                                <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] text-gray-800">
+                                    Open Onlook where your project is running (i.e.
+                                    <span className="code-span">http://localhost:3000</span>)
+                                </p>
+                            </div>
                             <div className="flex gap-[16px] items-center flex-row h-[fit-content]">
                                 <div className="rounded-[40px] rounded-tl-[40px] rounded-tr-[40px] rounded-bl-[40px] rounded-br-[40px] w-[50px] h-[50px] border-gray-200 border bg-transparent flex justify-center items-center">
                                     <p className="w-full h-full flex justify-center items-center">
@@ -180,15 +199,10 @@ export default function DocumentationPage() {
                                     </h4>
                                 </div>
                             </div>
-                            <div className="ml-[25px] p-[30px] pr-[30px] border-l-[1px] border-transparent mb-0 pl-[40px] h-[fit-content] pt-[8px] pb-[36px]">
-                                <p className="h-[fit-content] w-[fit-content] text-[#000000] text-[16px] text-gray-800">
-                                    Open Onlook where your project is running (i.e.
-                                    <span className="code-span">http://localhost:3000</span>)
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
+                <p className="w-[477px] h-[152px]"></p>
             </div>
             <HeadingList />
             <div className="w-[186px] h-[91px] bg-[#E3F3FF] hidden"></div>

@@ -26,13 +26,13 @@ const PackageSelector: React.FC<PackageSelectorProps> = ({ managers }) => {
     return (
         <div className="mx-auto bg-white rounded-sm border-[1px] overflow-hidden w-full group"> 
             <div className="p-0">
-                <div className="flex justify-between items-center px-3 py-2">
+                <div className="flex justify-between items-center px-3 py-1">
                     <div className="flex space-x-2">
                         {Object.keys(managers).map((manager) => (
                             <button
                                 key={manager}
                                 onClick={() => setSelectedManager(manager)}
-                                className={`px-1 py-2 ${
+                                className={`px-0 py-0 ${
                                     selectedManager === manager
                                         ? 'text-black font-medium'
                                         : 'text-gray-600 hover:text-gray-800'
@@ -44,13 +44,13 @@ const PackageSelector: React.FC<PackageSelectorProps> = ({ managers }) => {
                     </div>
                     <button
                         onClick={copyToClipboard}
-                        className="p-2 text-gray-500 hover:text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200" // Updated classes for visibility
+                        className="p-2 text-gray-500 hover:text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                         aria-label="Copy to clipboard"
                     >
                         <ClipboardCopy size={20} />
                     </button>
                 </div>
-                <div className="bg-gray-100 px-4 py-5">
+                <div className="bg-gray-100 px-3 py-4">
                     <pre className="text-sm font-mono">
                         {managers[selectedManager as keyof typeof managers]}
                     </pre>

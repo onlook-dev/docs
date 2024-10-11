@@ -40,17 +40,17 @@ const LinkedHeader: React.FC<LinkedHeaderProps> = ({
         <Link
             href={link || '/default-url'}
             className="flex items-center group relative right-[32px] p-2 justify-start transition-opacity duration-300"
-            onMouseDown={handleMouseDown} // Add mouse down event
-            onMouseUp={handleMouseUp} // Add mouse up event
-            onMouseLeave={handleMouseUp} // Reset on mouse leave
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp} 
+            onMouseLeave={handleMouseUp} 
         >
-            <Link2Icon className={`text-transparent group-hover:text-gray-500 group-hover:hover:text-gray-800 hover:text-gray-800 transition-colors duration-300 ${isPressed ? 'scale-90' : ''}`} /> {/* Add scale class based on pressed state */}
+            <Link2Icon className={`text-transparent group-hover:text-gray-500 group-hover:hover:text-gray-800 hover:text-gray-800 transition-colors duration-300 ${isPressed ? 'scale-90' : ''}`} /> 
 
             {React.createElement(
                 HeadingTag,
                 {
                     className: `${headerStyles[level]} ${className} flex-shrink-0 w-[fit-content] h-[fit-content] ml-2`,
-                    id: id, // Set the id on the heading
+                    id: id, 
                 },
                 title,
             )}
